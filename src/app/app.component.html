@@ -2,9 +2,16 @@
   <div class="row">
     <div class="col-xs-12 mb-5">
       <h1>Animations</h1>
-      <button class="btn btn-primary me-3">Animate!</button>
+      <button class="btn btn-primary me-3" (click)="onAnimate()">
+        Animate!
+      </button>
       <button class="btn btn-primary">Shrink!</button>
-      <div></div>
+
+      <div
+        class="mt-5"
+        style="width: 100px; height: 100px"
+        [@divState]="state"
+      ></div>
     </div>
   </div>
 
