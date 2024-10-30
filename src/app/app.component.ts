@@ -1,13 +1,20 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [NgFor],
+  animations: [],
+  styleUrl: './app.component.css',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'animations';
+  list = ['Milk', 'Sugar', 'Bread'];
+
+  onAdd(item: string) {
+    this.list.push(item);
+  }
+
+  onDelete(item: string) {}
 }
